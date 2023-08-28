@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap');
+
+/* VARIABLES */
+:root {
+    --rosa-claro: #FFE5EC;
+    --rosa-oscuro: #FF8FAB;
+    --rosa-oscuro2: #ec436d;
+    --rosa-principal: #FB6F92;
+
+    --font-claro: white;
+    --font-oscuro: #B61D43;
+
+    --font-base: 'Roboto Mono', monospace;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-base);
+    font-size: 62.5%; /*=1em=10px*/
+    color: var(--font-oscuro);
+    background-color: var(--rosa-claro);
+}
+
+a {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* CALCULADORA */
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.calculadora{
+    min-width: 30rem;
+    background-color: var(--rosa-oscuro);
+    border-radius: 25px;
+    padding: 3rem;
+}
+
+.pantalla{
+    height: 8rem;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    font: inherit;
+    font-size: 2rem;
+    pointer-events: none;
+}
+
+.botones{
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+button{
+    border: none;
+    background-color: var(--rosa-principal);
+    color: var(--rosa-claro);
+    font: inherit;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 2px 2px 5px var(--rosa-oscuro2);
+}
+
+button:active{
+    transform: scale(0.93);
+}
+
+.operador{
+    color: var(--font-oscuro);
+}
