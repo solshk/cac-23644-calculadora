@@ -28,8 +28,18 @@ const calcular = (btnValor) => {
         pantalla.value = inicio;
     } else if (btnValor === "=") {
         // console.log(pantalla.value);
-        resultado = math.evaluate(pantalla.value);
-        pantalla.value = resultado;
+        try {
+            if (resultado = math.evaluate(pantalla.value)) {
+                pantalla.value = resultado;
+                console.log("Funcionaa");
+            } else {
+                throw new Error('Algo salio mal');
+            }
+        } catch (error) {
+            console.log(error);
+            alert("Eso no es un cuenta que pueda resolver (°n°)");
+        };
+
     } else {
         pantalla.value += btnValor;
     }
