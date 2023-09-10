@@ -1,17 +1,15 @@
 const pantalla = document.querySelector(".pantalla");
 const buttons = document.querySelectorAll("button"); //<- esto me develve una lista de nodos
-const numeros = [document.querySelector(".cero")];
-const operadores = ["+", "-", "*", "/", "=", "%", "C"];
+// const operadores = ["+", "-", "*", "/", "=", "%", "C"];
 
 const depurar = (btnValor) => {
-    // console.log(btnValor);
     let inicio = "0";
 
-    if (
-        (btnValor == "00" || btnValor == "%" || btnValor == "+" || btnValor == "*" || btnValor == "/" || btnValor == "=")
-        && pantalla.value == "0"
-    ) {
+    if ((btnValor == "00" || btnValor == "%" || btnValor == "+" || btnValor == "*" || btnValor == "/" || btnValor == "=")
+        && pantalla.value == "0") {
         pantalla.value = inicio;
+    } else if (btnValor == "." && pantalla.value == "0") {
+        pantalla.value = "0.";
     } else if (pantalla.value == "0" && btnValor !== "C") {
         pantalla.value = btnValor;
     } else if (btnValor === "C") {
