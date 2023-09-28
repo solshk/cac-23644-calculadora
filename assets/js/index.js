@@ -26,6 +26,8 @@ const calcular = (btnValor) => {
         pantalla.value = btnValor;
     } else if (btnValor === "C") {
         pantalla.value = inicio;
+    } else if (btnValor === "DEL") {
+        pantalla.value = pantalla.value.slice(0, -1);
     } else if (btnValor === "=") {
         // console.log(pantalla.value);
         try {
